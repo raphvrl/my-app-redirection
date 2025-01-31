@@ -9,7 +9,7 @@
 
     const queryString = urlParams.toString();
 
-    const appUrl = `myapp://profile${queryString ? `?${queryString}` : ''}`;
+    const appUrl = `area-app://profile${queryString ? `?${queryString}` : ''}`;
 
     window.location.href = appUrl;
 
