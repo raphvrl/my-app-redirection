@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta http-equiv="refresh" content="0;url=monapp://lien-personnalise">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection vers l'application</title>
   <script>
-    window.location.href = "area-app://";
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const queryString = urlParams.toString();
+
+    const appUrl = `myapp://profile${queryString ? `?${queryString}` : ''}`;
+
+    window.location.href = appUrl;
+
     setTimeout(function() {
-      alert("Redirection vers l'application impossible");
+      alert('L\'application n\'est pas installée.');
     }, 1000);
   </script>
 </head>
 <body>
-  <a href="monapp://lien-personnalise">Ouvrir l'application</a>
+  <p>Redirection en cours vers l'application...</p>
 </body>
 </html>
