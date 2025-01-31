@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirection vers l'application</title>
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
+    // const urlParams = new URLSearchParams(window.location.search);
 
-    const queryString = urlParams.toString();
+    // const queryString = urlParams.toString();
 
-    const appUrl = `area-app://profile${queryString ? `?${queryString}` : ''}`;
+    // const appUrl = `area-app://profile${queryString ? `?${queryString}` : ''}`;
 
-    window.location.href = appUrl;
+    // window.location.href = appUrl;
+
+    window.location.href = 'area-app://profile';
 
     setTimeout(function() {
       alert('L\'application n\'est pas installée.');
