@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection vers l'application</title>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const queryString = urlParams.toString();
+
+    const appUrl = `http://localhost:8081/login?${queryString}`;
+
+    window.location.href = appUrl;
+
+    setTimeout(function() {
+      alert('Le serveur web n\'est pas installé.');
+    }, 1000);
+  </script>
+</head>
+<body>
+  <p>Redirection en cours vers l'application...</p>
+</body>
+</html>
